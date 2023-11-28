@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">QuizApp</string>
+    <string name="trueButton">True</string>
+    <string name="falseButton">False</string>
+    <string name="questionOne">The blue whale is the biggest animal to have ever lived</string>
+    <string name="questionTwo">Lagos is the capital of Nigeria</string>
+    <string name="questionThree">Vatican City is the smallest country in the world.</string>
+    <string name="questionFour">The U.S. and Canada celebrate Thanksgiving on the same day.
+</string>
+    <string name="questionFive">Java is the same as JavaScript</string>
+    <string name="questionSix">Canada has the longest coastline in the world</string>
+    <string name="questionSeven"> is Mount Kilimanjaro the world’s tallest peak? </string>
+    <string name="questionEight">In an instance method or a constructor, "this" is a reference to the current object.
+</string>
+    <string name="questionNine">Java programming is not statically-typed, means all variables should not first be declared before they can be used.
+</string>
+    <string name="questionTen">Enumerations are a special data type in Java that allows for a variable to be set to a predefined variable.
+</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="correct_toast">Correct!</string>
+    <string name="incorrect_toast">Incorrect!</string>
+
+
+</resources>

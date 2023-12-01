@@ -18,18 +18,9 @@ import android.widget.TextView;
  */
 public class QuestionFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
-    private String text;
-    private int color;
-
-    public QuestionFragment() {
-        // Required empty public constructor
-    }
+    static String text;
+    static int color;
 
 
     public static QuestionFragment newInstance(String text, int color) {
@@ -44,19 +35,25 @@ public class QuestionFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if(getArguments() != null){
+            text = getArguments().getString("text");
+            color = getArguments().getInt("color");
+        }
 
     }
 
 
     @Override
 
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+    public View onCreateView(@NonNull LayoutInflater inflater,  @Nullable ViewGroup container,
+                             @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
+
+        // Inflate the layout for this fragment
       View v = inflater.inflate(R.layout.fragment_question, container, false);
       TextView qText = v.findViewById(R.id.quizQuest);
       qText.setText(text);
+      qText.setBackgroundResource(color);
       return v;
 
     }

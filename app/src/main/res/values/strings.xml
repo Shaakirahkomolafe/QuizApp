@@ -1,25 +1,27 @@
 <resources>
-    <string name="app_name">QuizApp</string>
-    <string name="trueButton">True</string>
-    <string name="falseButton">False</string>
-    <string name="questionOne">The blue whale is the biggest animal to have ever lived</string>
-    <string name="questionTwo">Lagos is the capital of Nigeria</string>
-    <string name="questionThree">Vatican City is the smallest country in the world.</string>
-    <string name="questionFour">The U.S. and Canada celebrate Thanksgiving on the same day.
-</string>
-    <string name="questionFive">Java is the same as JavaScript</string>
-    <string name="questionSix">Canada has the longest coastline in the world</string>
-    <string name="questionSeven"> is Mount Kilimanjaro the world’s tallest peak? </string>
-    <string name="questionEight">In an instance method or a constructor, "this" is a reference to the current object.
-</string>
-    <string name="questionNine">Java programming is not statically-typed, means all variables should not first be declared before they can be used.
-</string>
-    <string name="questionTen">Enumerations are a special data type in Java that allows for a variable to be set to a predefined variable.
-</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="correct_toast">Correct!</string>
-    <string name="incorrect_toast">Incorrect!</string>
+    <string name="app_name" translatable="true">QuizApp</string>
+    <string name="trueButton" translatable="true">True</string>
+    <string name="falseButton" translatable="true">False</string>
+    <string name="questionOne" translatable="true">The blue whale is the biggest animal to have ever lived</string>
+    <string name="questionTwo" translatable="true">Lagos is the capital of Nigeria</string>
+    <string name="questionThree" translatable="true">Vatican City is the smallest country in the world.</string>
+    <string name="questionFour" translatable="true">The U.S. and Canada celebrate Thanksgiving on the same day. </string>
+    <string name="questionSix" translatable="true">Canada has the longest coastline in the world</string>
+    <string name="questionSeven" translatable="true"> is Mount Kilimanjaro the world’s tallest peak? </string>
+    <string name="questionEight" translatable="true">In an instance method or a constructor, this is a reference to the current object. </string>
+    <string name="questionNine" translatable="true">"Java programming is not statically-typed, means all variables should not first be declared before they can be used. "</string>
+    <string name="questionTen" translatable="true">"Enumerations are a special data type in Java that allows for a variable to be set to a predefined variable. "</string>
+    <string name="hello_blank_fragment" translatable="true">Hello blank fragment</string>
+    <string name="correct_toast" translatable="true">Correct!</string>
+    <string name="incorrect_toast" translatable="true">Incorrect!</string>
+    <string name="questionFive" translatable="true">Java is the same as JavaScript</string>
+    <string name="getAverage" translatable="true">Get the average</string>
+    <string name="getNumber" translatable="true">Select the number of Question</string>
+    <string name="resetNumber" translatable="true">Reset the Saved Number</string>
+    <string name="ok" translatable="true">OK</string>
+    <string name="save" translatable="true">Save</string>
+
+
 
 
 </resources>

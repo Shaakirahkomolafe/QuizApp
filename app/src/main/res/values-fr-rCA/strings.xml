@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">QuizApp</string>
+    <string name="trueButton">Vrai</string>
+    <string name="falseButton">Faux</string>
+    <string name="questionOne">Le rorqual bleu est le plus gros animal à avoir jamais vécu</string>
+    <string name="questionTwo">Lagos est la capitale du Nigeria</string>
+    <string name="questionThree">La Cité du Vatican est le plus petit pays du monde.</string>
+    <string name="questionFour">Les États-Unis et le Canada célèbrent l’Action de grâces le même jour.</string>
+    <string name="questionSix">Le Canada possède le plus long littoral au monde</string>
+    <string name="questionSeven">Le mont Kilimandjaro est-il le plus haut sommet du monde ?</string>
+    <string name="questionEight">Dans une méthode d’instance ou un constructeur, il s’agit d’une référence à l’objet actuel.</string>
+    <string name="questionNine">La programmation Java n’est pas typée statiquement, ce qui signifie que toutes les variables ne doivent pas d’abord être déclarées avant de pouvoir être utilisées.</string>
+    <string name="questionTen">Les énumérations sont un type de données spécial en Java qui permet de définir une variable sur une variable prédéfinie.</string>
+    <string name="hello_blank_fragment">Bonjour fragment vide</string>
+    <string name="correct_toast">Exact!</string>
+    <string name="incorrect_toast">C’est faux !</string>
+    <string name="questionFive">Java est le même que JavaScript</string>
+    <string name="ok">OK</string>
+    <string name="resetNumber">Réinitialiser le numéro enregistré</string>
+    <string name="getNumber">Sélectionnez le nombre de questions</string>
+    <string name="getAverage">Obtenez la moyenne</string>
+    <string name="save">Enregistrer</string>
+</resources>

@@ -21,4 +21,10 @@
     <string name="getNumber">Sélectionnez le nombre de questions</string>
     <string name="getAverage">Obtenez la moyenne</string>
     <string name="save">Enregistrer</string>
+    <string name="your"> Vos bonnes réponses sont </string>
+    <string name="out"> hors de </string>
+    <string name="attempt"> tentatives </string>
+    <string name="score" >Votre score est </string>
+
+
 </resources>

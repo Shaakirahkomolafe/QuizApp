@@ -10,7 +10,7 @@ import android.os.Bundle;
 
 public class AlertDialogueFragment extends DialogFragment {
   public interface saveButtonClickListener {
-        void saveNewAttempt(Integer quizScore);
+        void saveNewAttempt();
     }
 
     saveButtonClickListener listener;
@@ -27,7 +27,12 @@ public class AlertDialogueFragment extends DialogFragment {
         return new AlertDialog.Builder(requireContext())
                 .setMessage(msg)
                 .setTitle("Result")
-                .setPositiveButton(getString(R.string.save), (DialogInterface.OnClickListener) listener)
+                .setPositiveButton(getString(R.string.save), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        listener.saveNewAttempt();
+                    }
+                })
                 .setNegativeButton(getString(R.string.ok),null).create();
 
 

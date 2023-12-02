@@ -20,6 +20,17 @@
     <string name="resetNumber" translatable="true">Reset the Saved Number</string>
     <string name="ok" translatable="true">OK</string>
     <string name="save" translatable="true">Save</string>
+    <string name="your" translatable="true">Your correct answers are</string>
+    <string name="out" translatable="true">Out of </string>
+    <string name="attempt" translatable="true">attempts</string>
+    <string name="score" translatable="true">Your score is</string>
+
+
+
+
+
+
+
 
 
 

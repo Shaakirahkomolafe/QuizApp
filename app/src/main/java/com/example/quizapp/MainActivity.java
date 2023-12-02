@@ -26,7 +26,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements AlertDialogueFragment.saveButtonClickListener{
     Button trueButton, falseButton;
 
 
@@ -80,11 +80,6 @@ public class MainActivity extends AppCompatActivity {
         }
         getSupportFragmentManager().beginTransaction().add(R.id.frame,questionFragment).commit();
 
-//
-
-
-
-
 
 
             trueButton.setOnClickListener(new View.OnClickListener() {
@@ -106,13 +101,12 @@ public class MainActivity extends AppCompatActivity {
                     shuffleArray();
                     questionIndex = 0;
                     quizProgress.setProgress(questionIndex);
-                    AlertDialogueFragment.newInstance("Your Score is " + quizScore + " out of " + questions.size() ).show(getSupportFragmentManager(),"Alert");
+
+                    AlertDialogueFragment AF = AlertDialogueFragment.newInstance( getString(R.string.score ) +  quizScore  + getString(R.string.out ) + questions.size() );
+                    AF.listener = MainActivity.this;
+                    AF.show(getSupportFragmentManager(),"Alert");
 
 
-                    fs.writeScore(MainActivity.this, quizScore);
-
-
-                    quizScore = 0;
 
                 }
                 QuestionFragment questionFragment = QuestionFragment.newInstance(questions.get(questionIndex).getQuestion(), questions.get(questionIndex).getColor());
@@ -147,10 +141,12 @@ public class MainActivity extends AppCompatActivity {
 
                     questionIndex = 0;
                     quizProgress.setProgress(questionIndex);
-                    AlertDialogueFragment.newInstance(" Your Score is " + quizScore + " out of " +  questions.size() ).show(getSupportFragmentManager(),"Alert");
-                    fs.writeScore(MainActivity.this, quizScore);
+                    AlertDialogueFragment AF = AlertDialogueFragment.newInstance(getString(R.string.score ) + quizScore  +  getString(R.string.out ) + questions.size() );
+                    AF.listener = MainActivity.this;
+                    AF.show(getSupportFragmentManager(),"Alert");
 
-                    quizScore = 0;
+
+
 
                 }
                 QuestionFragment questionFragment = QuestionFragment.newInstance(questions.get(questionIndex).getQuestion(), questions.get(questionIndex).getColor());
@@ -180,8 +176,14 @@ public class MainActivity extends AppCompatActivity {
                 ArrayList<Integer> list = fs.getAllAttempts(this);
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                int sum = 0;
+                for (int lis: list) {
+                    sum += lis;
+                }
+                int average = sum/list.size();
 
-                builder.setMessage(" Your correct answers are " + quizScore + " out of " +  list.size() + " attempts ");
+
+                builder.setMessage(getString(R.string.your ) + average + getString(R.string.out ) +  list.size() + getString(R.string.attempt));
                 builder.setPositiveButton(getString(R.string.ok), null);
                 builder.show();
 
@@ -196,11 +198,11 @@ public class MainActivity extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
-    public void saveNewAttempt(Integer quizScore){
-        attempts.add(quizScore);
+    public void saveNewAttempt(){
+       /* attempts.add(quizScore);*/
 
         fs.writeScore(MainActivity.this, quizScore);
-
+        quizScore = 0;
 
     }
 

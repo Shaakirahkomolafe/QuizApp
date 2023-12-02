@@ -17,7 +17,7 @@ public class FileStorage {
     void writeScore(Context context, int Score){
         try {
             FileOutputStream fos = context.openFileOutput(fileName, Context.MODE_APPEND);
-            fos.write(String.valueOf(Score).getBytes());
+            fos.write(String.valueOf(Score + "\n").getBytes());
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -37,7 +37,7 @@ public class FileStorage {
         }
     }
 
-    void updateAttemptFile(Context context, ArrayList<Integer> updateAttempts){
+   /* void updateAttemptFile(Context context, ArrayList<Integer> updateAttempts){
 
         deleteAllScores(context);
         try {
@@ -50,7 +50,7 @@ public class FileStorage {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
+    }*/
 
     ArrayList<Integer> getAllAttempts(Context context) {
         ArrayList<Integer> list = new ArrayList<>(0);

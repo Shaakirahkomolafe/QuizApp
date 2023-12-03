@@ -24,6 +24,9 @@
     <string name="out" translatable="true">Out of </string>
     <string name="attempt" translatable="true">attempts</string>
     <string name="score" translatable="true">Your score is</string>
+    <string name="noattemt" translatable="true">No attempts available</string>
+
+
 
 
 

@@ -25,6 +25,8 @@
     <string name="out"> hors de </string>
     <string name="attempt"> tentatives </string>
     <string name="score" >Votre score est </string>
+    <string name="noattemt" translatable="true">Aucune tentative disponible</string>
+
 
 
 </resources>

@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity implements AlertDialogueFrag
                     questionIndex = 0;
                     quizProgress.setProgress(questionIndex);
 
-                    AlertDialogueFragment AF = AlertDialogueFragment.newInstance( getString(R.string.score ) +  quizScore  + getString(R.string.out ) + questions.size() );
+                    AlertDialogueFragment AF = AlertDialogueFragment.newInstance( getString( R.string.score ) +  quizScore  + getString( R.string.out ) + questions.size() );
                     AF.listener = MainActivity.this;
                     AF.show(getSupportFragmentManager(),"Alert");
 
@@ -141,7 +141,7 @@ public class MainActivity extends AppCompatActivity implements AlertDialogueFrag
 
                     questionIndex = 0;
                     quizProgress.setProgress(questionIndex);
-                    AlertDialogueFragment AF = AlertDialogueFragment.newInstance(getString(R.string.score ) + quizScore  +  getString(R.string.out ) + questions.size() );
+                    AlertDialogueFragment AF = AlertDialogueFragment.newInstance(getString( R.string.score ) + quizScore  +  getString( R.string.out ) + questions.size() );
                     AF.listener = MainActivity.this;
                     AF.show(getSupportFragmentManager(),"Alert");
 
@@ -172,23 +172,28 @@ public class MainActivity extends AppCompatActivity implements AlertDialogueFrag
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.average:
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
 
                 ArrayList<Integer> list = fs.getAllAttempts(this);
+                if (list.isEmpty()){
+                    builder.setMessage( getString( R.string.noattemt ));
+                    builder.show();
 
-                AlertDialog.Builder builder = new AlertDialog.Builder(this);
-                int sum = 0;
-                for (int lis: list) {
-                    sum += lis;
+                } else {
+                    int sum = 0;
+                    for (int lis : list) {
+                        sum += lis;
+                    }
+                    int average = sum / list.size();
+
+
+                    builder.setMessage(getString(R.string.your) + average + getString(R.string.out) + list.size() + getString(R.string.attempt));
+                    builder.setPositiveButton(getString(R.string.ok), null);
+                    builder.show();
+
+
                 }
-                int average = sum/list.size();
-
-
-                builder.setMessage(getString(R.string.your ) + average + getString(R.string.out ) +  list.size() + getString(R.string.attempt));
-                builder.setPositiveButton(getString(R.string.ok), null);
-                builder.show();
-
-
-
 
         case R.id.number:
 
